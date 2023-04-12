@@ -35,7 +35,7 @@ namespace Ize.Speedtest_Plugin
     public class Speedtest : PluginAction
     {
         public override string Name => "Speedtest";
-        public override string Description => "Runs a speedtest and updates the speedtest variables...";
+        public override string Description => "Runs a speedtest and updates the speedtest variables.";
         public override void Trigger(string clientId, ActionButton actionButton)
         {
             VariableManager.SetValue("SpeedtestActive", true, VariableType.Bool, SpeedtestPlugin.Instance, true);
@@ -49,11 +49,6 @@ namespace Ize.Speedtest_Plugin
                 DownloadSpeed speed = null;
 
                 speed = await FastClient.GetDownloadSpeed(SpeedTestUnit.KiloBitsPerSecond);
-
-                var message = $"Source: {speed.Source} Download Speed: {speed?.Speed} {speed.Unit}";
-
-                if (speed?.Server?.Id != null)
-                    message += $" (Server Id = {speed?.Server?.Id})";
 
                 VariableManager.SetValue("SpeedtestDownload", speed.Speed, VariableType.Float, SpeedtestPlugin.Instance, true);
                 VariableManager.SetValue("SpeedtestActive", false, VariableType.Bool, SpeedtestPlugin.Instance, true);
