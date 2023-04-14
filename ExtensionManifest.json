@@ -1,7 +1,7 @@
 ﻿{
   "type": "Plugin",
-  "name": "Macro-Deck Speedtest Plugin",
-  "author": "Ize",
+  "name": "Speedtest Plugin",
+  "author": "Ize83",
   "repository" : "https://github.com/Ize83/Ize.Speedtest",
   "packageId": "Ize.Speedtest",
   "version": "1.0.1",
