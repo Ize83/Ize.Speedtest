@@ -4,7 +4,7 @@
   "author": "Ize83",
   "repository" : "https://github.com/Ize83/Ize.Speedtest",
   "packageId": "Ize.Speedtest",
-  "version": "1.0.1",
-  "target-plugin-api-version": 35,
+  "version": "1.1.0",
+  "target-plugin-api-version": 36,
   "dll": "Speedtest.dll"
 }
