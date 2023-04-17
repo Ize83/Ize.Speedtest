@@ -4,7 +4,7 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <RootNamespace>Speedtest_Plugin</RootNamespace>
     <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
-    <Version>1.0.1</Version>
+    <Version>1.1.0</Version>
     <Authors>Ize</Authors>
     <AssemblyName>Speedtest</AssemblyName>
     <Platforms>AnyCPU;x64</Platforms>
@@ -17,6 +17,8 @@
   <ItemGroup>
     <Reference Include="Macro Deck 2">
       <HintPath>C:\Program Files\Macro Deck\Macro Deck 2.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <Private>False</Private>
     </Reference>
   </ItemGroup>
 
