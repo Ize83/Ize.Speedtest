@@ -1,9 +1,8 @@
 ﻿using Ize.Speedtest_Plugin;
-using SpeedTest.Net.Enums;
-using SpeedTest.Net;
 using SuchByte.MacroDeck.Logging;
 using System;
 using System.Threading.Tasks;
+using SpeedTestSharp.Enums;
 
 namespace Speedtest_Plugin
 {
@@ -28,12 +27,14 @@ namespace Speedtest_Plugin
 
             try
             {
-                var download = await FastClient.GetDownloadSpeed(SpeedTestUnit.MegaBitsPerSecond);
-                VariableHelper.UpdateDownloadSpeed(download.Speed, download.Unit);
+                var result = await SpeedtestPlugin.SpeedTestClient.TestSpeedAsync(SpeedUnit.Mbps);
+                VariableHelper.UpdateLatency(result.Latency);
+                VariableHelper.UpdateDownloadSpeed(result.DownloadSpeed, result.SpeedUnit.ToString());
+                VariableHelper.UpdateUploadSpeed(result.UploadSpeed, result.SpeedUnit.ToString());
             }
             catch (Exception ex)
             {
-                MacroDeckLogger.Error(SpeedtestPlugin.Instance, ex.StackTrace);
+                MacroDeckLogger.Error(SpeedtestPlugin.Instance, ex.Message);
             }
             finally
             {
