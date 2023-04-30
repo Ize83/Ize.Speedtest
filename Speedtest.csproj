@@ -4,14 +4,14 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <RootNamespace>Speedtest_Plugin</RootNamespace>
     <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
-    <Version>1.1.0</Version>
+    <Version>2.0.0</Version>
     <Authors>Ize</Authors>
     <AssemblyName>Speedtest</AssemblyName>
     <Platforms>AnyCPU;x64</Platforms>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="SpeedTest.NetCore" Version="2.1.0" />
+    <PackageReference Include="SuchByte.SpeedTestSharp" Version="1.0.1" />
   </ItemGroup>
 
   <ItemGroup>
